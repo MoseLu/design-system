@@ -1,0 +1,48 @@
+/* ========================================
+   Enterprise Workspace Design Tokens
+   版本：1.0.0
+   说明：统一导入所有设计令牌变量
+======================================== */
+
+/* 颜色系统 */
+@import './colors.css';
+
+/* 间距系统 */
+@import './spacing.css';
+
+/* 字体系统 */
+@import './typography.css';
+
+/* 效果系统 */
+@import './effects.css';
+
+/* 主题系统 */
+@import './theme.css';
+
+/* ========================================
+   快捷变量别名 - Shortcut Aliases
+   提供常用组合的快捷访问
+======================================== */
+
+/* 布局快捷变量 */
+:root {
+  --layout-page-padding: var(--page-padding-x) var(--page-padding-y);
+  --layout-card-padding: var(--card-padding-x) var(--card-padding-y);
+  --layout-topbar: var(--topbar-height) var(--topbar-padding-x) var(--topbar-padding-y);
+  --layout-sidebar: var(--sidebar-width);
+}
+
+/* 交互快捷变量 */
+:root {
+  --interactive-focus-ring: 0 0 0 3px var(--color-primary-500);
+  --interactive-hover-lift: translateY(-2px);
+  --interactive-click-scale: scale(0.98);
+}
+
+/* 状态快捷变量 */
+:root {
+  --state-success: var(--color-success-main);
+  --state-warning: var(--color-warning-main);
+  --state-error: var(--color-danger-main);
+  --state-info: var(--color-info-main);
+}

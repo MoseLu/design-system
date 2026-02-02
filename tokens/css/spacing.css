@@ -1,0 +1,132 @@
+/**
+ * Enterprise Workspace Design System - Design Tokens (Spacing)
+ * Version: 1.0.0
+ * 
+ * This file defines the spacing system for the design system.
+ * Uses a 4px base grid system for consistent spacing.
+ */
+
+:root {
+  /* ========================================
+     基础间距单位 - Base Spacing Unit
+     网格系统：4px 基础单位
+  ======================================== */
+  --spacing-unit: 4px;
+
+  /* ========================================
+     基础间距 - Base Spacing Scale
+  ======================================== */
+  --spacing-0: 0;
+  --spacing-1: var(--spacing-unit);           /* 4px */
+  --spacing-2: calc(var(--spacing-unit) * 2); /* 8px */
+  --spacing-3: calc(var(--spacing-unit) * 3); /* 12px */
+  --spacing-4: calc(var(--spacing-unit) * 4); /* 16px */
+  --spacing-5: calc(var(--spacing-unit) * 5); /* 20px */
+  --spacing-6: calc(var(--spacing-unit) * 6); /* 24px */
+  --spacing-7: calc(var(--spacing-unit) * 7); /* 28px */
+  --spacing-8: calc(var(--spacing-unit) * 8); /* 32px */
+  --spacing-9: calc(var(--spacing-unit) * 9); /* 36px */
+  --spacing-10: calc(var(--spacing-unit) * 10); /* 40px */
+  --spacing-12: calc(var(--spacing-unit) * 12); /* 48px */
+  --spacing-16: calc(var(--spacing-unit) * 16); /* 64px */
+  --spacing-20: calc(var(--spacing-unit) * 20); /* 80px */
+  --spacing-24: calc(var(--spacing-unit) * 24); /* 96px */
+
+  /* ========================================
+     语义化间距 - Semantic Spacing
+     根据使用场景命名的间距变量
+  ======================================== */
+
+  /* 页面级间距 - Page Level Spacing */
+  --page-padding-x: var(--spacing-6);         /* 页面水平内边距 */
+  --page-padding-y: var(--spacing-8);         /* 页面垂直内边距 */
+  --page-gap: var(--spacing-6);               /* 页面区块间距 */
+
+  /* 卡片级间距 - Card Level Spacing */
+  --card-padding-x: var(--spacing-6);         /* 卡片水平内边距 */
+  --card-padding-y: var(--spacing-6);         /* 卡片垂直内边距 */
+  --card-gap: var(--spacing-6);               /* 卡片内部元素间距 */
+  --card-margin-bottom: var(--spacing-6);     /* 卡片底部间距 */
+
+  /* 顶栏间距 - Topbar Spacing */
+  --topbar-height: 64px;                      /* 顶栏高度 */
+  --topbar-padding-x: var(--spacing-8);       /* 顶栏水平内边距 */
+  --topbar-padding-y: var(--spacing-4);       /* 顶栏垂直内边距 */
+  --topbar-button-gap: var(--spacing-10);     /* 顶栏按钮间距（10px = 2.5个单位） */
+  --topbar-item-gap: var(--spacing-4);        /* 顶栏元素间距 */
+
+  /* 侧边栏间距 - Sidebar Spacing */
+  --sidebar-width: 260px;                     /* 侧边栏宽度 */
+  --sidebar-collapsed-width: 72px;            /* 侧边栏折叠宽度 */
+  --sidebar-padding-x: var(--spacing-4);      /* 侧边栏水平内边距 */
+  --sidebar-padding-y: var(--spacing-4);      /* 侧边栏垂直内边距 */
+  --sidebar-item-gap: var(--spacing-2);       /* 侧边栏菜单项间距 */
+
+  /* 列表间距 - List Spacing */
+  --list-item-padding-x: var(--spacing-4);    /* 列表项水平内边距 */
+  --list-item-padding-y: var(--spacing-3);    /* 列表项垂直内边距 */
+  --list-gap: var(--spacing-2);               /* 列表项间距 */
+
+  /* 表单间距 - Form Spacing */
+  --form-item-gap: var(--spacing-4);          /* 表单项间距 */
+  --form-label-gap: var(--spacing-2);         /* 标签与输入框间距 */
+  --form-input-height: 40px;                  /* 输入框高度 */
+  --form-input-padding-x: var(--spacing-3);   /* 输入框水平内边距 */
+  --form-input-padding-y: var(--spacing-2);   /* 输入框垂直内边距 */
+
+  /* 按钮间距 - Button Spacing */
+  --button-padding-x-sm: var(--spacing-3);    /* 小按钮水平内边距 */
+  --button-padding-y-sm: var(--spacing-1);    /* 小按钮垂直内边距 */
+  --button-padding-x-md: var(--spacing-4);    /* 中按钮水平内边距 */
+  --button-padding-y-md: var(--spacing-2);    /* 中按钮垂直内边距 */
+  --button-padding-x-lg: var(--spacing-6);    /* 大按钮水平内边距 */
+  --button-padding-y-lg: var(--spacing-3);    /* 大按钮垂直内边距 */
+  --button-icon-gap: var(--spacing-2);        /* 按钮图标与文字间距 */
+
+  /* 表格间距 - Table Spacing */
+  --table-cell-padding-x: var(--spacing-4);   /* 表格单元格水平内边距 */
+  --table-cell-padding-y: var(--spacing-3);   /* 表格单元格垂直内边距 */
+  --table-header-height: 48px;                /* 表头高度 */
+  --table-row-height: 52px;                   /* 表格行高 */
+
+  /* 模态框间距 - Modal Spacing */
+  --modal-header-padding-x: var(--spacing-6);
+  --modal-header-padding-y: var(--spacing-5);
+  --modal-body-padding-x: var(--spacing-6);
+  --modal-body-padding-y: var(--spacing-5);
+  --modal-footer-padding-x: var(--spacing-6);
+  --modal-footer-padding-y: var(--spacing-4);
+  --modal-width-sm: 400px;
+  --modal-width-md: 560px;
+  --modal-width-lg: 720px;
+  --modal-width-xl: 960px;
+
+  /* 弹窗间距 - Popup Spacing */
+  --popup-padding-x: var(--spacing-4);
+  --popup-padding-y: var(--spacing-3);
+  --popup-min-width: 160px;
+  --popup-max-width: 280px;
+  --popup-item-gap: var(--spacing-1);
+
+  /* ========================================
+     断点系统 - Breakpoint System
+  ======================================== */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ========================================
+     Z-Index 层级 - Z-Index Scale
+  ======================================== */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-notification: 1080;
+}

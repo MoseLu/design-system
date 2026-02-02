@@ -1,0 +1,67 @@
+{
+  "name": "@enterprise-workspace/design-system",
+  "version": "1.0.0",
+  "description": "Enterprise Workspace 统一设计系统 - 提供设计令牌、通用组件和主题系统",
+  "main": "tokens/ts/index.ts",
+  "module": "tokens/ts/index.ts",
+  "types": "tokens/ts/index.ts",
+  "exports": {
+    ".": {
+      "types": "./tokens/ts/index.ts",
+      "import": "./tokens/ts/index.ts",
+      "require": "./tokens/ts/index.ts"
+    },
+    "./tokens/css": "./tokens/css/index.css",
+    "./components": "./components/index.ts",
+    "./hooks": "./hooks/index.ts",
+    "./utils": "./utils/index.ts"
+  },
+  "files": [
+    "tokens/",
+    "components/",
+    "hooks/",
+    "utils/",
+    "assets/",
+    "styles/"
+  ],
+  "scripts": {
+    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint:eslint": "eslint . --ext .ts,.tsx,.vue --max-warnings 0",
+    "lint:stylelint": "stylelint \"tokens/css/**/*.css\" --max-warnings 0",
+    "format": "prettier --write .",
+    "check": "npm run lint && npm run format:check",
+    "format:check": "prettier --check .",
+    "release": "node scripts/release.js"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "vue": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "design-system",
+    "ui-components",
+    "design-tokens",
+    "theme",
+    "enterprise"
+  ],
+  "author": "Enterprise Workspace Team",
+  "license": "MIT"
+}

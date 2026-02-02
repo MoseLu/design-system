@@ -1,0 +1,125 @@
+/**
+ * Enterprise Workspace Design System - Topbar Styles
+ * Version: 1.0.0
+ */
+
+.ds-topbar {
+  /* 布局变量引用 */
+  height: var(--topbar-height);
+  background: var(--theme-bg-surface);
+  border-bottom: 1px solid var(--theme-border-light);
+  box-shadow: var(--theme-shadow-sm);
+}
+
+.ds-topbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+}
+
+.ds-topbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: var(--topbar-padding-y) var(--topbar-padding-x);
+}
+
+.ds-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: var(--topbar-item-gap);
+  flex: 1;
+}
+
+.ds-topbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.ds-topbar__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.ds-topbar__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--topbar-button-gap); /* 10px 统一间距 */
+}
+
+.ds-topbar__button {
+  display: flex;
+  align-items: center;
+  gap: var(--button-icon-gap);
+  padding: var(--button-padding-y-sm) var(--button-padding-x-md);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-button);
+  color: var(--theme-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-colors);
+  outline: none;
+}
+
+.ds-topbar__button:hover:not(:disabled) {
+  color: var(--theme-text-primary);
+  background: var(--theme-bg-hover);
+}
+
+.ds-topbar__button:focus-visible {
+  outline: 2px solid var(--theme-border-focus);
+  outline-offset: 2px;
+}
+
+.ds-topbar__button--active {
+  color: var(--color-primary-main);
+  background: var(--color-primary-50);
+}
+
+.ds-topbar__button:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.ds-topbar__button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: var(--topbar-item-gap);
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* 暗色主题适配 */
+.ds-topbar--dark {
+  background: var(--theme-bg-surface);
+  border-bottom-color: var(--theme-border-light);
+}
+
+.ds-topbar--dark .ds-topbar__button--active {
+  background: var(--color-primary-900);
+  color: var(--color-primary-light);
+}
+
+/* 响应式适配 */
+@media (max-width: var(--breakpoint-lg)) {
+  .ds-topbar__nav {
+    display: none;
+  }
+}

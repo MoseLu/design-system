@@ -1,0 +1,206 @@
+/**
+ * Enterprise Workspace Design System - Button Styles
+ * Version: 1.0.0
+ */
+
+.ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-icon-gap);
+  border: none;
+  border-radius: var(--radius-button);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-colors), var(--transition-transform);
+  outline: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ds-button:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary-500);
+}
+
+.ds-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* 尺寸变体 */
+.ds-button--sm {
+  height: 32px;
+  padding: 0 var(--button-padding-x-sm);
+  font-size: var(--font-size-sm);
+}
+
+.ds-button--md {
+  height: 40px;
+  padding: 0 var(--button-padding-x-md);
+  font-size: var(--font-size-sm);
+}
+
+.ds-button--lg {
+  height: 48px;
+  padding: 0 var(--button-padding-x-lg);
+  font-size: var(--font-size-base);
+}
+
+/* 形状变体 */
+.ds-button--default {
+  border-radius: var(--radius-md);
+}
+
+.ds-button--pill {
+  border-radius: var(--radius-full);
+}
+
+.ds-button--circle {
+  border-radius: var(--radius-full);
+}
+
+.ds-button--icon-only.ds-button--sm {
+  width: 32px;
+  padding: 0;
+}
+
+.ds-button--icon-only.ds-button--md {
+  width: 40px;
+  padding: 0;
+}
+
+.ds-button--icon-only.ds-button--lg {
+  width: 48px;
+  padding: 0;
+}
+
+/* 颜色变体 */
+.ds-button--primary {
+  background: var(--color-primary-main);
+  color: white;
+}
+
+.ds-button--primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.ds-button--primary:active:not(:disabled) {
+  background: var(--color-primary-active);
+}
+
+.ds-button--primary:disabled {
+  background: var(--color-primary-disabled);
+  cursor: not-allowed;
+}
+
+.ds-button--secondary {
+  background: var(--theme-bg-active);
+  color: var(--theme-text-primary);
+}
+
+.ds-button--secondary:hover:not(:disabled) {
+  background: var(--color-neutral-300);
+}
+
+.ds-button--outline {
+  background: transparent;
+  border: 1px solid var(--theme-border-main);
+  color: var(--theme-text-primary);
+}
+
+.ds-button--outline:hover:not(:disabled) {
+  background: var(--theme-bg-hover);
+}
+
+.ds-button--ghost {
+  background: transparent;
+  color: var(--theme-text-primary);
+}
+
+.ds-button--ghost:hover:not(:disabled) {
+  background: var(--theme-bg-hover);
+}
+
+.ds-button--danger {
+  background: var(--color-danger-main);
+  color: white;
+}
+
+.ds-button--danger:hover:not(:disabled) {
+  background: var(--color-danger-hover);
+}
+
+.ds-button--danger:active:not(:disabled) {
+  background: var(--color-danger-active);
+}
+
+.ds-button--danger:disabled {
+  background: var(--color-danger-300);
+  cursor: not-allowed;
+}
+
+.ds-button--success {
+  background: var(--color-success-main);
+  color: white;
+}
+
+.ds-button--success:hover:not(:disabled) {
+  background: var(--color-success-hover);
+}
+
+.ds-button--success:active:not(:disabled) {
+  background: var(--color-success-dark);
+}
+
+/* 块级按钮 */
+.ds-button--block {
+  width: 100%;
+}
+
+/* 加载状态 */
+.ds-button--loading {
+  pointer-events: none;
+}
+
+.ds-button__spinner {
+  display: inline-flex;
+  animation: ds-button-spin 1s linear infinite;
+}
+
+.ds-button__spinner-track {
+  opacity: 0.25;
+}
+
+.ds-button__spinner-path {
+  opacity: 0.75;
+}
+
+@keyframes ds-button-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ds-button__spinner svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ds-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-button__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.ds-button__text {
+  display: inline-flex;
+  align-items: center;
+}

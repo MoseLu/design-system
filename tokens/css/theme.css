@@ -1,0 +1,157 @@
+/**
+ * Enterprise Workspace Design System - Design Tokens (Theme)
+ * Version: 1.0.0
+ * 
+ * This file defines the theme system for the design system.
+ * Supports light and dark themes with full color adaptation.
+ */
+
+:root {
+  /* ========================================
+     当前主题标识 - Theme Mode
+  ======================================== */
+  --theme-name: 'light';
+  --theme-color-scheme: light;
+}
+
+/* ========================================
+     亮色主题 - Light Theme
+     默认主题，适配大多数使用场景
+======================================== */
+:root,
+:root[data-theme="light"] {
+  /* 页面背景 */
+  --theme-bg-page: var(--color-neutral-50);
+  --theme-bg-surface: var(--color-neutral-50);
+  --theme-bg-elevated: var(--color-neutral-50);
+  --theme-bg-overlay: rgba(0, 0, 0, 0.5);
+  --theme-bg-hover: var(--color-neutral-100);
+  --theme-bg-active: var(--color-neutral-200);
+  --theme-bg-disabled: var(--color-neutral-100);
+
+  /* 文字颜色 */
+  --theme-text-primary: var(--color-neutral-900);
+  --theme-text-secondary: var(--color-neutral-600);
+  --theme-text-tertiary: var(--color-neutral-500);
+  --theme-text-disabled: var(--color-neutral-400);
+  --theme-text-inverse: var(--color-neutral-50);
+
+  /* 边框颜色 */
+  --theme-border-light: var(--color-neutral-200);
+  --theme-border-main: var(--color-neutral-300);
+  --theme-border-dark: var(--color-neutral-400);
+  --theme-border-focus: var(--color-primary-500);
+
+  /* 组件特定变量 */
+  --theme-card-bg: var(--color-neutral-50);
+  --theme-card-border: var(--color-neutral-200);
+  --theme-glass-bg: rgba(255, 255, 255, 0.8);
+  --theme-glass-border: rgba(255, 255, 255, 0.5);
+
+  /* 阴影适配 */
+  --theme-shadow-sm: var(--shadow-sm);
+  --theme-shadow-md: var(--shadow-md);
+  --theme-shadow-lg: var(--shadow-lg);
+  --theme-shadow-xl: var(--shadow-xl);
+
+  /* 交互状态颜色 */
+  --theme-button-primary-bg: var(--color-primary-main);
+  --theme-button-primary-text: #ffffff;
+  --theme-button-hover-bg: var(--color-primary-hover);
+  --theme-button-active-bg: var(--color-primary-active);
+  --theme-link-color: var(--color-primary-main);
+  --theme-link-hover-color: var(--color-primary-hover);
+}
+
+/* ========================================
+     暗色主题 - Dark Theme
+     适合夜间或低光环境使用
+======================================== */
+:root[data-theme="dark"] {
+  /* 页面背景 */
+  --theme-bg-page: var(--color-dark-950);
+  --theme-bg-surface: var(--color-dark-900);
+  --theme-bg-elevated: var(--color-dark-800);
+  --theme-bg-overlay: rgba(0, 0, 0, 0.7);
+  --theme-bg-hover: var(--color-dark-800);
+  --theme-bg-active: var(--color-dark-700);
+  --theme-bg-disabled: var(--color-dark-800);
+
+  /* 文字颜色 */
+  --theme-text-primary: var(--color-dark-100);
+  --theme-text-secondary: var(--color-dark-400);
+  --theme-text-tertiary: var(--color-dark-500);
+  --theme-text-disabled: var(--color-dark-600);
+  --theme-text-inverse: var(--color-dark-900);
+
+  /* 边框颜色 */
+  --theme-border-light: var(--color-dark-700);
+  --theme-border-main: var(--color-dark-600);
+  --theme-border-dark: var(--color-dark-500);
+  --theme-border-focus: var(--color-primary-500);
+
+  /* 组件特定变量 */
+  --theme-card-bg: var(--color-dark-900);
+  --theme-card-border: var(--color-dark-700);
+  --theme-glass-bg: rgba(15, 23, 42, 0.8);
+  --theme-glass-border: rgba(30, 41, 59, 0.5);
+
+  /* 阴影适配（暗色模式下阴影需要调整） */
+  --theme-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --theme-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --theme-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --theme-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+
+  /* 交互状态颜色 */
+  --theme-button-primary-bg: var(--color-primary-main);
+  --theme-button-primary-text: #ffffff;
+  --theme-button-hover-bg: var(--color-primary-400);
+  --theme-button-active-bg: var(--color-primary-600);
+  --theme-link-color: var(--color-primary-400);
+  --theme-link-hover-color: var(--color-primary-300);
+}
+
+/* ========================================
+     CSS 变量自动映射 - CSS Variable Auto Mapping
+     自动将颜色变量映射到主题变量
+======================================== */
+:root {
+  /* 颜色变量快捷访问（兼容旧项目迁移） */
+  --bg-color-base: var(--theme-bg-page);
+  --bg-color-surface: var(--theme-bg-surface);
+  --bg-color-elevated: var(--theme-bg-elevated);
+  --text-color-primary: var(--theme-text-primary);
+  --text-color-secondary: var(--theme-text-secondary);
+  --text-color-tertiary: var(--theme-text-tertiary);
+  --border-color: var(--theme-border-main);
+  --border-color-light: var(--theme-border-light);
+}
+
+/* ========================================
+     高对比度模式 - High Contrast Mode
+======================================== */
+@media (prefers-contrast: high) {
+  :root,
+  :root[data-theme="light"] {
+    --theme-border-main: var(--color-neutral-900);
+    --theme-text-secondary: var(--color-neutral-800);
+  }
+
+  :root[data-theme="dark"] {
+    --theme-border-main: var(--color-dark-100);
+    --theme-text-secondary: var(--color-dark-200);
+  }
+}
+
+/* ========================================
+     减少动画偏好 - Reduced Motion
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

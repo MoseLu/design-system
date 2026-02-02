@@ -1,0 +1,37 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-no-hex": true,
+    "declaration-property-value-no-unknown": [
+      true,
+      {
+        "properties": {
+          "margin": ["/^var\\(--spacing-.+/", "/^var\\(--.+-gap$/", "/^0$/"],
+          "padding": ["/^var\\(--spacing-.+/", "/^var\\(--.+-padding-.+$/", "/^0$/"],
+          "font-size": ["/^var\\(--font-size-.+$/", "/^var\\(--.+-size$.+/"],
+          "font-family": ["/^var\\(--font-family-.+$/"],
+          "color": ["/^var\\(--.+$/"],
+          "background-color": ["/^var\\(--.+$/"],
+          "border-color": ["/^var\\(--.+$/"],
+          "border-radius": ["/^var\\(--radius-.+$/", "/^var\\(--.+$/", "/^0$/"],
+          "box-shadow": ["/^var\\(--.+$/", "/^none$/"],
+        }
+      }
+    ],
+    "unit-allowed-list": [
+      "px",
+      "rem",
+      "em",
+      "%",
+      "vh",
+      "vw",
+      "vmin",
+      "vmax",
+    ],
+    "shorthand-property-no-redundant-values": true,
+  },
+  "ignoreFiles": [
+    "node_modules/**",
+    "dist/**",
+  ],
+}
